@@ -1,0 +1,14 @@
+
+use ("Ejercicio")
+
+db.products.insertOne({
+  name:"Camiseta",
+  sizes:['L','M'],
+  category:{
+    name:"catergory",
+
+    image:""
+
+  }
+
+})

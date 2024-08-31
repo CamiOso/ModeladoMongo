@@ -1,0 +1,27 @@
+
+use ("Ejercicio")
+
+db.stores.insertMany(
+  [{
+    name:"Store 1",
+
+    products_ids:[
+      ObjectId("66d22db5a76ff510e149edcb"),
+      ObjectId("66d30efc4f712c959c469035")
+    ]
+
+
+  },
+  {
+    name:"Store 2",
+    sizes:['L'],
+    products_ids:
+    [
+      ObjectId("66d22db5a76ff510e149edcb"),
+      ObjectId("66d30efc4f712c959c469035"),
+      ObjectId("66d30efc4f712c959c469036")
+    ]
+
+
+  } ]
+)

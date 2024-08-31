@@ -1,0 +1,15 @@
+
+
+db.products.update(
+  {
+    _id: ObjectId('66d22db5a76ff510e149edcb')
+  },
+  {
+    $set:{
+      stores_ids:[
+        ObjectId('66d2fbf3fa7573f78cd987ff'),
+        ObjectId('66d3107f0bdfb2b49a263ae2')
+      ]
+    }
+  }
+)

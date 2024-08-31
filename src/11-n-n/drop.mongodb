@@ -1,0 +1,5 @@
+
+
+use ("Ejercicio")
+
+db.products.drop()

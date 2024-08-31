@@ -1,0 +1,10 @@
+
+use ("Ejercicio")
+
+db.users.insertOne({
+  email:'nico@gmail.com',
+  password:'Azas1hjS',
+  role:'admin'
+
+
+})

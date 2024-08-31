@@ -1,0 +1,28 @@
+use("Ejercicio");
+//Coleccion con JSON Schema
+
+db.createCollection("users", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      //Atributos obligatorios
+      required:["email","password"],
+      //Propiedades
+      properties: {
+        name: {
+          bsonType: "string",
+        },
+        las_name:{
+          bsonType: "string",
+
+        },
+        email: {
+          bsonType: "string",
+        },
+        password: {
+          bsonType: "string",
+        },
+      },
+    },
+  },
+});

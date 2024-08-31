@@ -1,0 +1,21 @@
+
+use ("Ejercicio")
+//Relacion 1 a 1
+db.orders.insertOne({
+  //Cuando se escribe el id de un documento, se debe escribir como ObjectId
+  user_Id:ObjectId('66d2f77071f6c6fbf33e5854'),
+  date:'2020-12-12',
+  //Relacion 1 a N embebidas,es decir una orden puede tener varios items
+  items:[
+    {name:'Zapatos',
+      price:120,
+      quantity:1
+    },{
+      name:'Sillas',
+      price:120,
+      quantity:1
+
+    }
+  ]
+
+})

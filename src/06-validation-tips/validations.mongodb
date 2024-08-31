@@ -1,0 +1,13 @@
+use('Ejercicio')
+
+// Coleccion con JSON Schema-- Me da toda la informacion de las collecciones
+db.getCollectionInfos()
+
+//Actualizacion un esquema sin necesidad de eliminar la coleccion
+db.runCommand({
+  //Escribo la colleccion y su validators--Schema --Tener en cuenta los permisos de ese usuario Databases deben de ser Atlas admin se actualiza  en Mongo Compass
+  collMod: '',
+  validator:{
+
+  }
+})

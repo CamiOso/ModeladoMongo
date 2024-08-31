@@ -1,0 +1,9 @@
+use("Ejercicio")
+
+db.users.find({
+  //Consulta de un subdocumento
+  //Cuales son las direcciones que quedan en bogota
+  "addess.city":'Bogota'
+})
+
+

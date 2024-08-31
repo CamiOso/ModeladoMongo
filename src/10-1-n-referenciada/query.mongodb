@@ -1,0 +1,47 @@
+use("Ejercicio")
+
+db.orders.find({user_id: ObjectId('66d2f72c5cf2d66f79140416')}).count()
+
+db.orders.find()
+
+
+db.orders.aggregate([
+
+  {
+    $lookup: {
+      from:'users',
+      localField: 'user_id',
+      foreignField: '_id',
+      as: 'user'
+    }
+  }
+
+])
+
+
+db.orders.aggregate([
+  {
+ $match:{
+  _id: ObjectId('66d3006e048269561d1f3b30')
+ }
+  },
+
+  {
+    $lookup: {
+      from:'users',
+      localField: 'user_id',
+      foreignField: '_id',
+      as: 'user'
+    }
+  }
+
+])
+
+
+
+
+
+
+
+
+

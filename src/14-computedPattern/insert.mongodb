@@ -1,0 +1,9 @@
+use("Ejercicio")
+
+db.orders.insertOne({
+  user_id: ObjectId("66d22db5a76ff510e149edcb"),
+  date: new Date(),
+  total:0,
+  items: []
+
+})

@@ -1,0 +1,49 @@
+use("Ejercicio");
+//Coleccion con JSON Schema
+
+
+
+db.createCollection("users", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      //Atributos obligatorios
+      required: ["email", "password","role"],
+
+  //No quiero atributos adicionales de los definidos en el schema --additionalProperties: false, si los quiero coloca True
+  additionalProperties: false,
+
+      //Propiedades
+      properties: {
+        name: {
+          bsonType: "string",
+        },
+        las_name: {
+          bsonType: "string",
+        },
+        email: {
+          bsonType: "string",
+        },
+        password: {
+          bsonType: "string",
+
+          //Validacion de la contraseña: datos de la A-Z mayuscula y minuscula, numeros del 0-9 y longitud de 8 minimo
+          pattern:"^[A-Za-z0-9]{8,}$"
+        },
+        age: {
+          bsonType: "number",
+          minimum: 18,
+          maximum: 99,
+        },
+        isSingle:{
+          //Boolean
+          bsonType: "bool",
+        },
+        role:{
+          //Enum
+          enum:['customer','seller','admin']
+        }
+      },
+    },
+  },
+});

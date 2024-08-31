@@ -1,0 +1,20 @@
+
+use ("Ejercicio")
+//Relacion 1 a 1
+db.stores.insertOne({
+  storeId:'ST001',
+  name:'Tienda 1',
+  address:'Calle 1',
+
+})
+
+
+db.stores_details.insertOne({
+  storeId:'ST001',
+  descripcion:"Descripcion de la tienda ",
+  manager:{
+    email:'@gmail.com',
+    cellphone:'123456789'
+  }
+
+})

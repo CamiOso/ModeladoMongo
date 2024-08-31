@@ -1,0 +1,19 @@
+//66d322af07759c6c2a8c63bc
+
+use("Ejercicio")
+
+
+db.orders.updateOne({_id:ObjectId('66d322af07759c6c2a8c63bc')},
+{
+  $push:{
+    items:{
+      product_id:ObjectId('66d22db5a76ff510e149edcb'),
+      quantity:2,
+      price:100
+    }
+  },
+  $inc:{
+    total:2*100
+  }
+
+})

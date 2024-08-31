@@ -1,0 +1,24 @@
+
+use ("Ejercicio")
+//Relacion 1 a 1
+db.users.insertOne({
+  email:'laura@gmail.com',
+  password:'Azas1hjS',
+  role:'customer',
+  social_accounts:['facebook','twitter'],
+  //Subodocumentos
+
+  addess:{
+    street:'calle falsa 123',
+    city:'Bogota',
+    zip:'12345'
+  },
+  shipping_addess:{
+    street:'calle falsa 444',
+    city:'Bogota',
+    zip:'123677'
+  }
+
+
+
+})

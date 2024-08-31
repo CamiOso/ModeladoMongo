@@ -1,0 +1,10 @@
+use("Ejercicio")
+
+db.users.find( )
+
+db.orders.find(
+  {
+    "items.quantity":3
+  }
+)
+

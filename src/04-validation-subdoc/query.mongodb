@@ -1,0 +1,3 @@
+use("Ejercicio")
+
+db.products.find()

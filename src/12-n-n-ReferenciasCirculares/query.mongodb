@@ -1,0 +1,15 @@
+use("Ejercicio")
+
+
+
+db.products.aggregate([
+  {
+    $lookup: {
+      from: 'stores',
+      localField:'stores_ids',
+      foreignField:'_id',
+      as:'stores'
+    }
+  }
+])
+

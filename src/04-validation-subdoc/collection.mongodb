@@ -1,0 +1,48 @@
+use("Ejercicio");
+//Coleccion con JSON Schema
+
+db.createCollection("products", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      //Atributos obligatorios
+      required: ["name"],
+      //Propiedades
+      properties: {
+        name: {
+          bsonType: "string",
+        },
+        sizes:{
+          //Array - el atributo de tamaño es un array y los elementos que contiene ese array son de tipo string
+          bsonType: "array",
+          //Tamaño minimo del array
+          minItems:1,
+          //No se pueden repetir elementos en el array
+          uniqueItems:true,
+          //Validar la informacion del array
+          items:{
+            bsonType:"string",
+
+          }
+        },
+        // Validar un subdocumento
+        category:{
+          bsonType:"object",
+          //Atributos obligatorios
+          required:["name"],
+          properties:{
+            name:{
+              bsonType:"string",
+            },
+            image:{
+              bsonType:"string",
+             
+            }
+
+          }
+
+        }
+      },
+    },
+  },
+});
